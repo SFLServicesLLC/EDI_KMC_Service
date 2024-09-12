@@ -51,14 +51,8 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_EC753FBE60194D0E99CBFB3AE11A5F01"
+        "MsmKey" = "8:_D761CF21052D48FA8CC5FBE8B2AAE394"
         "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9C09E33EE2ADCE29A019B5C0ACDA2FFC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -85,6 +79,12 @@
         "OwnerKey" = "8:_BD9D163B389874CB4EAE14FB2A198E02"
         "MsmSig" = "8:_UNDEFINED"
         }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_9C09E33EE2ADCE29A019B5C0ACDA2FFC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
     }
     "Configurations"
     {
@@ -103,6 +103,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -119,6 +127,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -328,9 +344,9 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_EC753FBE60194D0E99CBFB3AE11A5F01"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_D761CF21052D48FA8CC5FBE8B2AAE394"
             {
-            "SourcePath" = "8:P:\\Artwork & Images\\SFLServicesLLC\\Favicon.ico"
+            "SourcePath" = "8:..\\Favicon.ico"
             "TargetName" = "8:Favicon.ico"
             "Tag" = "8:"
             "Folder" = "8:_FF7C31CAC5544AD7885E4972F11D606F"
@@ -422,7 +438,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Kiwiplan EDI_KMC_Service"
         "ARPURLINFOABOUT" = "8:https://www.sflservicesllc.com"
-        "ARPPRODUCTICON" = "8:_EC753FBE60194D0E99CBFB3AE11A5F01"
+        "ARPPRODUCTICON" = "8:_D761CF21052D48FA8CC5FBE8B2AAE394"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -926,7 +942,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_3DACBA53D9114E888FFE1037C27680E3"
             {
-            "SourcePath" = "8:..\\obj\\Debug\\EDI_KMC_Service.exe"
+            "SourcePath" = "8:..\\obj\\Release\\EDI_KMC_Service.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_FF7C31CAC5544AD7885E4972F11D606F"
