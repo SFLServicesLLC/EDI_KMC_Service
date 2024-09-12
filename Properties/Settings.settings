@@ -1,0 +1,18 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="EDI_KMC_Service.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="PurgeLogFilesMonth" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="MsSQLHostName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">sfl-sql-001.onling.com</Value>
+    </Setting>
+    <Setting Name="MsSQLDataBaseName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ESP_DSS</Value>
+    </Setting>
+    <Setting Name="CycleTimeMinutes" Type="System.Double" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ESP_Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="infParameter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mainttime" Type="datetime" />
+          <Property Name="userID" Type="nvarchar" MaxLength="30" />
+          <Property Name="name" Type="nvarchar" MaxLength="80" />
+          <Property Name="scope" Type="int" />
+          <Property Name="value" Type="nvarchar" MaxLength="2048" />
+          <Property Name="comments" Type="nvarchar" MaxLength="1024" />
+          <Property Name="sectionID" Type="int" Nullable="false" />
+          <Property Name="helpcontextid" Type="int" />
+          <Property Name="isaudited" Type="smallint" />
+          <Property Name="datatype" Type="int" />
+          <Property Name="allowpersonalvalues" Type="smallint" />
+          <Property Name="allowgroupvalues" Type="smallint" />
+          <Property Name="allowplantvalues" Type="smallint" />
+          <Property Name="parametertype" Type="int" />
+          <Property Name="obsolete" Type="nvarchar" MaxLength="30" />
+          <Property Name="enumeration" Type="nvarchar" MaxLength="50" />
+          <Property Name="businessClassID" Type="int" />
+          <Property Name="versionTimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+          <Property Name="configurationchangereference" Type="nvarchar" MaxLength="30" />
+          <Property Name="configurationnotes" Type="nvarchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="mscMessageSystem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="mainttime" Type="datetime" />
+          <Property Name="userID" Type="nvarchar" MaxLength="30" />
+          <Property Name="name" Type="nvarchar" MaxLength="200" />
+          <Property Name="sectionID" Type="int" />
+          <Property Name="adapter" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="status" Type="int" />
+          <Property Name="mAPDatasetID" Type="int" />
+          <Property Name="direction" Type="int" />
+          <Property Name="versionTimeStamp" Type="timestamp" StoreGeneratedPattern="Computed" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="ESP_ModelStoreContainer">
+          <EntitySet Name="infParameter" EntityType="Self.infParameter" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="mscMessageSystem" EntityType="Self.mscMessageSystem" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ESP_Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="infParameter">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mainttime" Type="DateTime" Precision="3" />
+          <Property Name="userID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="scope" Type="Int32" />
+          <Property Name="value" Type="String" MaxLength="2048" FixedLength="false" Unicode="true" />
+          <Property Name="comments" Type="String" MaxLength="1024" FixedLength="false" Unicode="true" />
+          <Property Name="sectionID" Type="Int32" Nullable="false" />
+          <Property Name="helpcontextid" Type="Int32" />
+          <Property Name="isaudited" Type="Int16" />
+          <Property Name="datatype" Type="Int32" />
+          <Property Name="allowpersonalvalues" Type="Int16" />
+          <Property Name="allowgroupvalues" Type="Int16" />
+          <Property Name="allowplantvalues" Type="Int16" />
+          <Property Name="parametertype" Type="Int32" />
+          <Property Name="obsolete" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="enumeration" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="businessClassID" Type="Int32" />
+          <Property Name="versionTimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+          <Property Name="configurationchangereference" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="configurationnotes" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="mscMessageSystem">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="mainttime" Type="DateTime" Precision="3" />
+          <Property Name="userID" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="sectionID" Type="Int32" />
+          <Property Name="adapter" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="mAPDatasetID" Type="Int32" />
+          <Property Name="direction" Type="Int32" />
+          <Property Name="versionTimeStamp" Type="Binary" MaxLength="8" FixedLength="true" Nullable="false" annotation:StoreGeneratedPattern="Computed" />
+        </EntityType>
+        <EntityContainer Name="ESPEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="infParameters" EntityType="Self.infParameter" />
+          <EntitySet Name="mscMessageSystems" EntityType="Self.mscMessageSystem" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ESP_ModelStoreContainer" CdmEntityContainer="ESPEntities">
+          <EntitySetMapping Name="infParameters">
+            <EntityTypeMapping TypeName="ESP_Model.infParameter">
+              <MappingFragment StoreEntitySet="infParameter">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="mainttime" ColumnName="mainttime" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="scope" ColumnName="scope" />
+                <ScalarProperty Name="value" ColumnName="value" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="helpcontextid" ColumnName="helpcontextid" />
+                <ScalarProperty Name="isaudited" ColumnName="isaudited" />
+                <ScalarProperty Name="datatype" ColumnName="datatype" />
+                <ScalarProperty Name="allowpersonalvalues" ColumnName="allowpersonalvalues" />
+                <ScalarProperty Name="allowgroupvalues" ColumnName="allowgroupvalues" />
+                <ScalarProperty Name="allowplantvalues" ColumnName="allowplantvalues" />
+                <ScalarProperty Name="parametertype" ColumnName="parametertype" />
+                <ScalarProperty Name="obsolete" ColumnName="obsolete" />
+                <ScalarProperty Name="enumeration" ColumnName="enumeration" />
+                <ScalarProperty Name="businessClassID" ColumnName="businessClassID" />
+                <ScalarProperty Name="versionTimeStamp" ColumnName="versionTimeStamp" />
+                <ScalarProperty Name="configurationchangereference" ColumnName="configurationchangereference" />
+                <ScalarProperty Name="configurationnotes" ColumnName="configurationnotes" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="mscMessageSystems">
+            <EntityTypeMapping TypeName="ESP_Model.mscMessageSystem">
+              <MappingFragment StoreEntitySet="mscMessageSystem">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="mainttime" ColumnName="mainttime" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="sectionID" ColumnName="sectionID" />
+                <ScalarProperty Name="adapter" ColumnName="adapter" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="mAPDatasetID" ColumnName="mAPDatasetID" />
+                <ScalarProperty Name="direction" ColumnName="direction" />
+                <ScalarProperty Name="versionTimeStamp" ColumnName="versionTimeStamp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

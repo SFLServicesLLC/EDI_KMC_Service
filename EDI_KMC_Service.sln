@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EDI_KMC_Service", "EDI_KMC_Service.csproj", "{BDC8EE0F-34FC-4851-A641-32F981193C39}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EDI_KMC_Service_Setup", "EDI_KMC_Service_Setup\EDI_KMC_Service_Setup.vdproj", "{65F4FAEA-FF1A-499B-A9DD-093E6533A844}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Items", "Solutions Items", "{DF21F5E0-8727-48B1-9B0C-8280E63796F0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BDC8EE0F-34FC-4851-A641-32F981193C39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDC8EE0F-34FC-4851-A641-32F981193C39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDC8EE0F-34FC-4851-A641-32F981193C39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDC8EE0F-34FC-4851-A641-32F981193C39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65F4FAEA-FF1A-499B-A9DD-093E6533A844}.Debug|Any CPU.ActiveCfg = Debug
+		{65F4FAEA-FF1A-499B-A9DD-093E6533A844}.Debug|Any CPU.Build.0 = Debug
+		{65F4FAEA-FF1A-499B-A9DD-093E6533A844}.Release|Any CPU.ActiveCfg = Release
+		{65F4FAEA-FF1A-499B-A9DD-093E6533A844}.Release|Any CPU.Build.0 = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {50F5B7DF-F4B5-4BF2-8711-6DC36E63F3B4}
+	EndGlobalSection
+EndGlobal
