@@ -134,6 +134,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -420,15 +428,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EDI_KMC_Service"
-        "ProductCode" = "8:{29434DF1-733F-4756-98AB-DFFBADA68332}"
-        "PackageCode" = "8:{0EDEC641-F0F9-4517-B564-4A57F241B915}"
+        "ProductCode" = "8:{C99A9888-993E-4907-857D-1D8A4D6E3A4C}"
+        "PackageCode" = "8:{B51A6B72-F4C8-47F9-B201-67A77732CF13}"
         "UpgradeCode" = "8:{F549ED1B-D65A-4E4D-8127-89BEEC714A24}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.1"
         "Manufacturer" = "8:SFLServicesLLC"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
