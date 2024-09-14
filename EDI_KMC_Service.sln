@@ -8,6 +8,10 @@ EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EDI_KMC_Service_Setup", "EDI_KMC_Service_Setup\EDI_KMC_Service_Setup.vdproj", "{65F4FAEA-FF1A-499B-A9DD-093E6533A844}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Items", "Solutions Items", "{DF21F5E0-8727-48B1-9B0C-8280E63796F0}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
