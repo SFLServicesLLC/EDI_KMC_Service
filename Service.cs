@@ -293,39 +293,51 @@ namespace EDI_KMC_Service
                 {
 
                     _log.Debug($"Looking at the {m.name} message system");
-                    var oldparam = context.infParameters.Where(f => f.sectionID == m.sectionID && 
+                    var oldparam = context.infParameters.Where(f => f.sectionID == m.sectionID &&
                                                                 f.name.Contains("EDIService")).ToList();
 
+                    //_log.Info($"Updating the new parameter EDI_KMC_Service Folder with the old parameter value {p.value}");
+                    var newparam = context.infParameters.Where(f => f.sectionID == m.sectionID &&
+                                                    f.name.Contains("EDI_KMC_Service")).ToList();
+
+                    //Copy from Old Parameter to the new one
                     if (oldparam.Count > 0)
                     {
-                        _log.Debug($"There are parameters with the old name EDIService Folder");
-                        foreach (var p in oldparam)
+                        if (oldparam[0].value.Length > 0)
                         {
-                            if(p.value == "")
+                            _log.Debug($"The new parameter was added with the new name EDI_KMC_Service Folder");
+                            foreach (var p in newparam)
                             {
-                                _log.Info($"Deleting the old parameter {p.name} with the value {p.value}");
-                                context.infParameters.Attach(p);
-                                context.infParameters.Remove(p);
+                                _log.Info($"Updating the new parameter value with {p.value}");
+                                newparam[0].value = oldparam[0].value;
+                                context.infParameters.Attach(newparam[0]);
+                                context.Entry(newparam[0]).State = System.Data.Entity.EntityState.Modified;
+                                //context.Entry(newparam).Property(newparam[0].value).IsModified = true;
                                 context.SaveChanges();
-                                _log.Info($"Delete of old parameter {p.name} completed");
+                                _log.Info($"Update of new parameter value to {p.value} completed");
 
+                                _log.Info($"Deleting the old parameter {oldparam[0].name} with the value {oldparam[0].value}");
+                                context.infParameters.Attach(oldparam[0]);
+                                context.infParameters.Remove(oldparam[0]);
+                                context.SaveChanges();
+                                _log.Info($"Delete of old parameter {oldparam[0].name} completed");
                             }
-                            if(p.value != "")
-                            {
-                                _log.Info($"Updating the new parameter EDI_KMC_Service Folder with the old parameter value {p.value}");
-                                var newparam = context.infParameters.Where(f => f.sectionID == m.sectionID &&
-                                                                f.name == "EDI_KMC_Service Folder").ToList();
-                                if (newparam != null)
-                                {
-                                    _log.Info($"Updating the new parameter value with {p.value}");
-                                    newparam[0].value = p.value;
-                                    context.infParameters.Attach(newparam[0]);
-                                    context.Entry(newparam[0]).State = System.Data.Entity.EntityState.Modified;
-                                    //context.Entry(newparam).Property(newparam[0].value).IsModified = true;
-                                    context.SaveChanges();
-                                    _log.Info($"Update of new parameter value to {p.value} completed");
-                                }
+                        }
+                    }
+                    //Rereading the parameters
+                    oldparam = context.infParameters.Where(f => f.sectionID == m.sectionID &&
+                                                                f.name.Contains("EDIService")).ToList();
 
+                    newparam = context.infParameters.Where(f => f.sectionID == m.sectionID &&
+                                                    f.name.Contains("EDI_KMC_Service")).ToList();
+
+                    if (oldparam.Count > 0 && newparam.Count > 0)
+                    {
+                        if (oldparam[0].value.Length == 0 && newparam[0].value.Length == 0)
+                        {
+                            _log.Debug($"There are parameters with the old name EDIService Folder");
+                            foreach (var p in oldparam)
+                            {
                                 _log.Info($"Deleting the old parameter {p.name} with the value {p.value}");
                                 context.infParameters.Attach(p);
                                 context.infParameters.Remove(p);
@@ -335,7 +347,9 @@ namespace EDI_KMC_Service
                         }
                     }
                 }
-            }
+
+             }
+
         }
         #endregion
 
