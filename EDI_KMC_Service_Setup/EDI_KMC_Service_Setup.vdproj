@@ -228,7 +228,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:.NETFramework,Version=v4.7.2"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.5.2"
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
                 }
@@ -436,15 +436,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:EDI_KMC_Service"
-        "ProductCode" = "8:{63610FC8-86A1-4505-B2A7-90B4EDED588B}"
-        "PackageCode" = "8:{C1701810-09F8-44F6-BFB1-BAC6DB0D2CB7}"
+        "ProductCode" = "8:{7C0685FF-580C-43E5-B5B6-8BDA3B84C877}"
+        "PackageCode" = "8:{95CE202C-9D60-4F93-BDE6-7492D89CE66A}"
         "UpgradeCode" = "8:{F549ED1B-D65A-4E4D-8127-89BEEC714A24}"
         "AspNetVersion" = "8:2.0.50727.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:TRUE"
-        "ProductVersion" = "8:1.0.3"
+        "ProductVersion" = "8:1.0.4"
         "Manufacturer" = "8:SFLServicesLLC"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
