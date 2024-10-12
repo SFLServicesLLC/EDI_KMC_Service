@@ -144,7 +144,7 @@ namespace EDI_KMC_Service
         public void PurgeFiles()
         {
             _log.Info("Purging files");
-            strWorkFolder = strStorageFolder + @"\CSCFileService";
+            strWorkFolder = strStorageFolder + @"\EDI_KMC_Service";
             strLogFolder = strWorkFolder + @"\Log";
             string[] logFiles = Directory.GetFiles(strLogFolder);
             foreach (string logFile in logFiles)
@@ -187,8 +187,8 @@ namespace EDI_KMC_Service
                 _log.Debug("Loading the tables from the entity framework");
                 using (var context = new ESPEntities())
                 {
-                    //Looking at Message System that are set to Folder type
-                    var Lookup = context.mscMessageSystems.Where(m => m.adapter == "Folder")
+                    //Looking at Message System that are set to Folder type and status = 0 for active
+                    var Lookup = context.mscMessageSystems.Where(m => m.adapter == "Folder" && m.status == 0)
                                                                     .ToList();
                     _log.Debug("Loaded the message systems that are set as folder type");
 
@@ -408,7 +408,9 @@ namespace EDI_KMC_Service
                                 }
                                 catch (Exception ex)
                                 {
-                                    _log.Error(ex.ToString() + Constants.vbCrLf + ex.StackTrace.ToString());
+                                    _log.Error("Cannot create directory " + strInputFolder);
+                                    _log.Error(ex.ToString());
+                                    _log.Error("Verify directory full path");
                                 }
                                 
                                 _log.Debug("Created directory " + strInputFolder);
