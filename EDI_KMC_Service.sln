@@ -9,6 +9,7 @@ Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "EDI_KMC_Service_Setup", "ED
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions Items", "Solutions Items", "{DF21F5E0-8727-48B1-9B0C-8280E63796F0}"
 	ProjectSection(SolutionItems) = preProject
+		CHANGELOG.md = CHANGELOG.md
 		LICENSE.txt = LICENSE.txt
 		README.md = README.md
 	EndProjectSection
